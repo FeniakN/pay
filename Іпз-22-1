@@ -1,8 +1,13 @@
-def (a, x, y, z, coefficient_1=None):
-    coefficient_a=1+z
-    coefficient_b= x+(y/x)
-    coefficient_c = a-(1/(1+x))
-    coefficient_x= coefficient_c/coefficient_b
-    coefficient_z = coefficient_a*coefficient_z
-    print(resalt)
-print( coefficient_1=( 3,6,8,1))
+def calculate_result(a, x, y, z, coefficient_1=None):
+    coefficient_a = 1 + z
+    coefficient_b = x + (y / x)
+    coefficient_c = a - (1 / (1 + x))
+    coefficient_x = coefficient_c / coefficient_b
+    result = coefficient_a * coefficient_x
+
+    if coefficient_1 is not None:
+        result += coefficient_1
+
+    return result
+result = calculate_result(3, 6, 8, 1, coefficient_1=10)
+print("Результат обчислення:", result)
